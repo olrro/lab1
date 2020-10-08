@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+
+        <title>Компьютерные курсы от CourseBox</title>
+
+        <link rel="icon" type="image/png" href="template/images/logo.png" />
+        <link rel="stylesheet" href="template/assets/bootstrap.min.css">
+        <link rel="stylesheet" href="template/assets/webfonts/fa.min.css" />
+    </head>
+    <body>
+        <div class="d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3 bg-white border-bottom shadow-sm">
+            <a href="index.htm" class="my-0 mr-md-auto text-primary h4 text-dark text-decoration-none">
+                <img src="template/images/logo.png" width="25px" height="25px" alt="" />
+                CourseBox
+            </a>
+            <nav class="my-2 my-md-0 mr-md-3">
+                <a class="p-2 text-dark text-decoration-none" href="items.html">Предметы </a>
+                <a class="p-2 text-dark text-decoration-none" href="teachers.html">Список преподавателей</a>
+                <a class="p-2 text-dark text-decoration-none" href="students.html">Наши студенты</a>
+                <a class="p-2 text-dark text-decoration-none" href="rating.html">Успеваемость</a>
+            </nav>
+            <a class="btn btn-primary" href="login.html">Войти</a>
+        </div>
+
+        <div class="container">
+            <h1 class="mt-5">
+                Мой профиль <a href="/profile#start" id="start"><i class="fas fa-user"></i></a>
+            </h1>
+            <p class="lead">Добро пожаловать в ваш профиль. Здесь вы можете редактировать информацию о себе и изменять некоторые параметры в учебе.</p>
+
+            <div class="row mt-5">
+                <div class="col-xl-4 mb-4">
+                    <div class="border p-3 rounded">
+                        <div class="text-center">
+                            <div class="position-relative d-inline-block">
+                                <img src="template/images/avatar.jpg" width="140px" height="140px" class="bg-primary rounded-circle d-block mx-auto my-2 p-1" alt="" />
+                                <i class="fas fa-check align-items-center text-center justify-content-center position-absolute text-white align-baseline bg-primary d-inline-flex rounded-circle"
+                                    style="right: 0; white-space: nowrap; bottom: 20px; width: 2rem; height: 2rem;"
+                                ></i>
+                            </div>
+                        </div>
+                        <h4 class="text-center">{username}</h4>
+                    </div>
+                    <ul class="list-group my-3">
+                        <li class="list-group-item d-flex justify-content-between lh-condensed">
+                            <div>
+                                <h6 class="my-0">Группа</h6>
+                                <small class="text-muted">Студент / Профессия - Аналитик</small>
+                            </div>
+                        </li>
+                        <li class="list-group-item d-flex justify-content-between lh-condensed">
+                            <div>
+                                <h6 class="my-0">Дата начала обучения</h6>
+                                <small class="text-muted">12.06.2019 (238 дней с нами)</small>
+                            </div>
+                        </li>
+                        <li class="list-group-item d-flex justify-content-between">
+                            <span>Баланс</span>
+                            <strong>13 586 <i class="fas fa-ruble-sign"></i> </strong>
+                        </li>
+                    </ul>
+
+                    <div class="btn-group w-100" role="group">
+                        <button id="btnGroupDrop1" type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Мои курсы
+                        </button>
+                        <div class="dropdown-menu w-100" aria-labelledby="btnGroupDrop1">
+                            <a class="dropdown-item" href="#">История</a>
+                            <a class="dropdown-item" href="#">Новый курс</a>
+                            <a class="dropdown-item" href="#">Мой рейтинг</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-8">
+                    <div class="card mb-3 mb-lg-5">
+                        <h5 class="card-header">Настройки</h5>
+
+
+                        <div class="card-body">
+                            <div class="row form-group">
+                                <label for="fullname" class="col-sm-3 col-form-label input-label">
+                                    Имя &amp; Email
+                                </label>
+
+                                <div class="col-sm-9">
+                                    <div class="input-group">
+                                        <div class="input-group-prepend">
+                                            <span class="input-group-text">
+                                                <i class="far fa-user"></i>
+                                            </span>
+                                        </div>
+                                        <input type="text" class="form-control" name="fullname" id="fullname" placeholder="Алеша Лепехин" value="{name}" />
+                                        <input type="text" class="form-control" name="email" id="email" placeholder="admin@lab.ru" value="{email}" />
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <div class="row form-group">
+                                <label class="col-sm-3 col-form-label input-label">О себе</label>
+
+                                <div class="col-sm-9">
+                                    <div class="input-group">
+                                        <div class="input-group-prepend">
+                                            <span class="input-group-text">
+                                                <i class="fas fa-signature"></i>
+                                            </span>
+                                        </div>
+                                        <textarea class="form-control" id="info" placeholder="Напишите рассказ о себе в несколько предложений" name="info" rows="10" style="resize: none;"></textarea>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <hr class="my-4" />
+
+
+
+                            <div class="row form-group">
+                                <label for="altpass" class="col-sm-3 col-form-label input-label">Текущий пароль</label>
+
+                                <div class="col-sm-9">
+                                    <div class="input-group">
+                                        <div class="input-group-prepend">
+                                            <span class="input-group-text">
+                                                <i class="fas fa-key"></i>
+                                            </span>
+                                        </div>
+                                        <input type="password" class="form-control" name="altpass" id="altpass" placeholder="Введите текущий пароль" />
+                                    </div>
+                                </div>
+                            </div>
+
+
+
+                            <div class="row form-group">
+                                <label for="password1" class="col-sm-3 col-form-label input-label">Новый пароль</label>
+
+                                <div class="col-sm-9">
+                                    <div class="input-group">
+                                        <div class="input-group-prepend">
+                                            <span class="input-group-text">
+                                                <i class="fas fa-key"></i>
+                                            </span>
+                                        </div>
+                                        <input type="password" class="form-control" name="password1" id="password1" placeholder="Введите новый пароль" />
+                                    </div>
+                                </div>
+                            </div>
+
+
+
+                            <div class="row form-group">
+                                <label for="password2" class="col-sm-3 col-form-label input-label">Подтвердите новый пароль</label>
+
+                                <div class="col-sm-9">
+                                    <div class="mb-3">
+                                        <div class="input-group">
+                                            <div class="input-group-prepend">
+                                                <span class="input-group-text">
+                                                    <i class="fas fa-lock"></i>
+                                                </span>
+                                            </div>
+                                            <input type="password" class="form-control" name="password2" id="password2" placeholder="Подтвердите пароль" />
+                                        </div>
+                                    </div>
+
+                                    <h5>Рекомендации по паролю:</h5>
+
+                                    <p class="card-text font-size-1">Пароль должен включать в себя:</p>
+
+                                    <ul class="font-size-1">
+                                        <li>Минимум 8 символов</li>
+                                        <li>Как минимум 1 символ в верхнем регистре</li>
+                                        <li>Как минимум 1 символ в нижнеи регистре</li>
+                                        <li>Как минимум 1 специальный символ</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <button type="button" class="btn btn-lg btn-primary w-100" name="button">Сохранить</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal fade" id="exitModal" tabindex="-1" role="dialog" aria-labelledby="exitModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exitModalLabel">Выход</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        Вы действительно хотите выйти из своего аккаунта?
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Назад</button>
+                        <a href="logout.html" type="button" class="btn btn-primary">Выйти</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <footer class="pt-4 mt-5 my-md-5 pt-md-5 border-top">
+                <div class="row">
+                    <div class="col-12 col-md">
+                        <a href="index.htm" class="text-decoration-none">
+                            <img class="mr-1" src="template/images/logo.png" width="25px" height="25px" alt="" />
+                            <span class="text-dark">CourseBox</span>
+                        </a>
+                        <small class="d-block mt-4 mb-3 text-muted mr-2">© 2017-2020 - Все права защищены</small>
+                    </div>
+                    <div class="col-6 col-md">
+                        <h5>Профессии</h5>
+                        <ul class="list-unstyled text-small">
+                            <li><a class="text-muted" href="#">Разработчик ПО</a></li>
+                            <li><a class="text-muted" href="#">Аналитик</a></li>
+                            <li><a class="text-muted" href="#">Дизайнер </a></li>
+                            <li><a class="text-muted" href="#">Музыкант</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-6 col-md">
+                        <h5>Предметы</h5>
+                        <ul class="list-unstyled text-small">
+                            <li><a class="text-muted" href="#">Экономика</a></li>
+                            <li><a class="text-muted" href="#">Программирование на C#</a></li>
+                            <li><a class="text-muted" href="#">Электронная музыка</a></li>
+                            <li><a class="text-muted" href="#">UI Дизайн (Photoshop)</a></li>
+                            <li><a class="text-muted" href="#">Аналитика в MS Exel</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-6 col-md">
+                        <h5>Помощь</h5>
+                        <ul class="list-unstyled text-small">
+                            <li><a class="text-muted" href="#">Контакты</a></li>
+                            <li><a class="text-muted" href="#">Политика конфиденциальности</a></li>
+                            <li><a class="text-muted" href="#">FAQ</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </footer>
+        </div>
+    </body>
+
+    <script src="template/assets/jquery.js"></script>
+    <script src="template/assets/popper.min.js"></script>
+    <script src="template/assets/bootstrap.min.js"></script>
+</html>
